@@ -36,7 +36,7 @@ Linux 用户需要安装带有 lua 扩展的 librime 版本，以下是部分发
 
 Linux 用户也可以按照[这里的说明](https://github.com/hchunhui/librime-lua#instructions)进行编译安装
 
-# 配置
+## 配置
 
 默认情况下，按 `[` 键将会选中词组的第一个字，按 `]` 键将会选中词组的最后一个字。  
 你可以通过修改 `key_binder/select_first_character` 以及 `key_binder/select_last_character` 的值来改变默认按键。  
@@ -49,4 +49,4 @@ key_binder:
   select_last_character: 'period'
 ```
 
-可用的键值列表参见[Rime Schema.yaml 详解](https://github.com/LEOYoon-Tsaw/Rime_collections/blob/master/Rime_description.md#%E4%B8%83%E5%85%B6%E5%AE%83)
+可用的键值列表参见 [Rime Schema.yaml 详解](https://github.com/LEOYoon-Tsaw/Rime_collections/blob/master/Rime_description.md#%E4%B8%83%E5%85%B6%E5%AE%83)
