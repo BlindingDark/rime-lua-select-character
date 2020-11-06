@@ -29,10 +29,13 @@ select_character_processor = require("select_character")
 以词定字依托于 [RIME Lua 脚本扩展](https://github.com/hchunhui/librime-lua)，Windows, Mac, Android 用户请将 rime 升级到最新发布的版本。  
 Linux 用户需要安装带有 lua 扩展的 librime 版本，以下是部分发行版的安装方式
 
-- ArchLinux (AUR)
+- ArchLinux
   ``` shell
-  yay -S librime-lua-git
+  yay -S librime
   ```
+
+  推荐使用 `fcitx5` 并配合 `fcitx5-configtool` 在 GUI 下设置开启 lua 插件。
+  
 
 Linux 用户也可以按照[这里的说明](https://github.com/hchunhui/librime-lua#instructions)进行编译安装
 
