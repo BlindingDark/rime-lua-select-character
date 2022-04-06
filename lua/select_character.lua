@@ -41,8 +41,12 @@ local function select_character(key, env)
    local config = engine.schema.config
    local first_key = config:get_string('key_binder/select_first_character') or 'bracketleft'
    local last_key = config:get_string('key_binder/select_last_character') or 'bracketright'
+   local initials = config:get_string('key_binder/select_character_only_for_initial') or ''
 
    if (key:repr() == first_key and commit_text ~= "") then
+      if (initials ~= '' and not string.find(initials, context.input:sub(1,1))) then
+         return 2
+      end
       engine:commit_text(first_character(commit_text))
       context:clear()
 
@@ -50,6 +54,9 @@ local function select_character(key, env)
    end
 
    if (key:repr() == last_key and commit_text ~= "") then
+      if (initials ~= '' and not string.find(initials, context.input:sub(1,1))) then
+         return 2
+      end
       engine:commit_text(last_character(commit_text))
       context:clear()
 
