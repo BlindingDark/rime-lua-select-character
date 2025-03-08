@@ -14,15 +14,6 @@ bash rime-install BlindingDark/rime-lua-select-character:customize:schema=luna_p
 ```
 
 若想更新到最新版，则重复执行安装命令即可。  
-由于 plum 目前还不能自动引入 lua 脚本，所以在使用以词定字之前还需要手动在 rime 配置目录下的 `rime.lua` 文件中添加以下内容，`rime.lua` 文件不存在可手动创建。
-
-``` lua
--- select_character_processor: 以词定字
--- 详见 `lua/select_character.lua`
-select_character_processor = require("select_character")
-```
-
-以上步骤都做好之后重新部署 rime 即可生效。
 
 ### Rime Lua 脚本扩展的安装方式
 

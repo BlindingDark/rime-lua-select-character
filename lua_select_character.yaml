@@ -2,4 +2,4 @@
 ---
 patch:
   'engine/processors/@before 0':
-    lua_processor@select_character_processor
+    lua_processor@*select_character
